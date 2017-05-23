@@ -4,9 +4,13 @@ import Promise from './es6-promise'
 module.exports = {
   PAGE_WORK: '/pages/work-detail/work-detail',
 
-  VIDEO_LIST: 'https://www.zjhaining.com/weixin_page/api.php?op=videolist&order=listorder&id=43',
-  VIDEO_LIST_TWO: 'https://www.zjhaining.com/weixin_page/api.php?op=videolist&order=listorder&id=42',
   VIDEO_LIST_ALL: 'https://www.zjhaining.com/weixin_page/api.php?op=videolist&order=listorder&id=41',
+  VIDEO_LIST_ONE: 'https://www.zjhaining.com/weixin_page/api.php?op=videolist&order=listorder&id=42',
+  VIDEO_LIST_TWO: 'https://www.zjhaining.com/weixin_page/api.php?op=videolist&order=listorder&id=43',
+  VIDEO_LIST_THREE: 'https://www.zjhaining.com/weixin_page/api.php?op=videolist&order=listorder&id=44',
+  VIDEO_LIST_FOUR: 'https://www.zjhaining.com/weixin_page/api.php?op=videolist&order=listorder&id=45',
+  VIDEO_LIST_FIVE: 'https://www.zjhaining.com/weixin_page/api.php?op=videolist&order=listorder&id=46',
+ 
   VIDEO_CONTENT: 'https://www.zjhaining.com/weixin_page/api.php?op=getvideo&id=',
 
   get (url) {

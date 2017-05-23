@@ -18,19 +18,37 @@
 </scroll-view>-->
 <!--所有视频-->
 <view class="list-container {{currentNavbar==0 ? '' : 'hidden'}}">
-  <block wx:for="{{list_all}}">
+  <block wx:for="{{list_0}}">
     <template is="videoList" data="{{...item}}"></template>
   </block>
 </view>
-<!--宣传片-->
+<!--美食-->
 <view class="list-container {{currentNavbar==1 ? '' : 'hidden'}}">
-  <block wx:for="{{list_one}}">
+  <block wx:for="{{list_1}}">
     <template is="videoList" data="{{...item}}"></template>
   </block>
 </view>
-<!--记录片-->
+<!--美景-->
 <view class="list-container {{currentNavbar==2 ? '' : 'hidden'}}">
-  <block wx:for="{{list_two}}">
+  <block wx:for="{{list_2}}">
+    <template is="videoList" data="{{...item}}"></template>
+  </block>
+</view>
+<!--活动-->
+<view class="list-container {{currentNavbar==3 ? '' : 'hidden'}}">
+  <block wx:for="{{list_3}}">
+    <template is="videoList" data="{{...item}}"></template>
+  </block>
+</view>
+<!--音乐-->
+<view class="list-container {{currentNavbar==4 ? '' : 'hidden'}}">
+  <block wx:for="{{list_4}}">
+    <template is="videoList" data="{{...item}}"></template>
+  </block>
+</view>
+<!--其他-->
+<view class="list-container {{currentNavbar==5 ? '' : 'hidden'}}">
+  <block wx:for="{{list_5}}">
     <template is="videoList" data="{{...item}}"></template>
   </block>
 </view>
