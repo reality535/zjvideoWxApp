@@ -1,0 +1,29 @@
+<template name="videoList">
+  <view class="video-item">
+      <navigator url="../play/play?id={{id}}&title={{title}}">
+        <view class="videoDiv">
+          <view class="video-thumb">
+            <image class="" src="{{thumb}}"></image>
+            <image class="" src="../images/videocard-dim.png"></image>
+          </view>
+          <view class="card_node">
+            <text class="border-tag" wx:if="{{catid == 43}}">宣传片</text>
+            <text class="border-tag" wx:elif="{{catid == 42}}">记录片</text>
+          </view>
+          <view class="card_word">
+            <view class="video-title">
+              {{title}}
+            </view>
+            <view class="video-tag">
+              <text style="margin-right:20rpx;">{{video_tag}}</text>
+              <text>{{video_time}}</text>
+            </view>
+          </view>
+          <image src="../images/video_play.png" class="play-pic"></image>
+        </view>
+      </navigator>
+      <view class="video-des">
+        <text>{{description}}</text>
+      </view>
+    </view>
+</template>

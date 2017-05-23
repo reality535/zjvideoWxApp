@@ -1,0 +1,31 @@
+<view class="play">
+    <video src="{{video_detail.videourl}}" binderror="" autoplay="true"></video>
+    <view class="video-info">
+      <view class="video-title">{{video_detail.title}}</view>
+      <view class="video-time">
+        <text style="margin-right:20rpx;">{{video_detail.video_tag}}</text>
+        <text>时长{{video_detail.video_time}}</text>
+      </view>
+      <view class="video-des">
+        {{video_detail.description}}
+      </view>
+    </view>
+</view>
+
+<view class="page">
+  <view class="page__bd">
+    <view class="posid">相关推荐</view>
+    <scroll-view class="recommend_scroll_x_box" scroll-x="true">
+      <view class="recommend_hot_box" wx:for="{{hotList}}">
+        <navigator url="../play/play?id={{item.id}}&title={{item.title}}" class="relation_video" open-type="redirect">
+          <view class="posid_img">
+            <image src="{{item.thumb}}" class="recommend_hot_image"></image>
+            <image src="../images/videocard-dim.png" class="recommend_hot_image"></image>
+            <image src="../images/video_play.png" class="play-pic"></image>
+          </view>
+          <view class="posid_title">{{item.title}}</view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

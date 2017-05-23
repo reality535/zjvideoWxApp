@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<import src="../template/videolist.wxml"/>
+
+<!--<view class="navbar">
+    <view class="navbar-item" wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="swichNav">
+      <text class="navbar-text {{currentNavbar==idx ? 'active' : ''}}">{{item}}</text>
+    </view>
+  </view>-->
+
+  <scroll-view class="navbar_scroll_x_box" scroll-x>
+    <view class="navbar-item" wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="swichNav">
+      <text class="navbar-text {{currentNavbar==idx ? 'active' : ''}}">{{item}}</text>
+    </view>
+  </scroll-view>
+
+<!--<scroll-view scroll-y="true" bindscrolltoupper="pullDownRefresh" class="{{currentNavbar==0 ? '' : 'hidden'}}" style="height: {{systemInfo.windowHeight}}px;">
+  <template is="videoList" data="{{name,list}}"></template>
+</scroll-view>-->
+<!--所有视频-->
+<view class="list-container {{currentNavbar==0 ? '' : 'hidden'}}">
+  <block wx:for="{{list_all}}">
+    <template is="videoList" data="{{...item}}"></template>
+  </block>
+</view>
+<!--宣传片-->
+<view class="list-container {{currentNavbar==1 ? '' : 'hidden'}}">
+  <block wx:for="{{list_one}}">
+    <template is="videoList" data="{{...item}}"></template>
+  </block>
+</view>
+<!--记录片-->
+<view class="list-container {{currentNavbar==2 ? '' : 'hidden'}}">
+  <block wx:for="{{list_two}}">
+    <template is="videoList" data="{{...item}}"></template>
+  </block>
+</view>
